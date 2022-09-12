@@ -1,12 +1,14 @@
-import React, {useState, useEffect} from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { LandingPage } from './components/landing-page/LandingPage';
+import { LanguagePicker } from './components/language/LanguagePicker';
 
 const App = () => {
 
     return (
-        <div>
-        </div>
+        <>
+            <LanguagePicker />
+            <LandingPage />
+        </>
     )
 };
 

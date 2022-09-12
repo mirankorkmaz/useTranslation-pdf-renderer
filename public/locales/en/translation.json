@@ -1,0 +1,12 @@
+{
+    "Language": {
+        "language": "Language",
+        "languages": {
+          "en": "English",
+          "sv": "Swedish"
+        }
+      },
+      "LandingPage": {
+        "hi": "Hello!"
+      }
+}
