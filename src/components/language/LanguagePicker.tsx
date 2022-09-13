@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getLanguage, i18nLoading, setLanguage } from "../../i18n";
+import "./LanguagePicker.css"
 
 export const LanguagePicker = () => {
     const languages = [
@@ -32,15 +33,18 @@ export const LanguagePicker = () => {
     };
 
     return (
-        <div>
-            <button aria-haspopup="true" onClick={handleOnClick}>{currentLanguage}</button>
-            <div>
+        <label className="dropdown">
+            <div className="dd-button">
+                Language
+            </div>
+            <input type="checkbox" className="dd-input" id="test" onClick={handleOnClick} />
+            <ul className="dd-menu">
                 {languages.map(({ value, text }) => (
                     <p key={value} onClick={() => selectLanguage(value)}>
                         {text}
                     </p>
                 ))}
-            </div>
-        </div>
+            </ul>
+        </label>
     )
 };
