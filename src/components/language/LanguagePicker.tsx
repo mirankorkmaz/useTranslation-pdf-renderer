@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { getLanguage, i18nLoading, setLanguage } from "../../i18n";
 import "./LanguagePicker.css"
 
 export const LanguagePicker = () => {
+    const { t } = useTranslation();
     const languages = [
         { value: "en", text: "English" },
         { value: "sv", text: "Svenska" },
@@ -35,7 +37,7 @@ export const LanguagePicker = () => {
     return (
         <label className="dropdown">
             <div className="dd-button">
-                Language
+                {t("Language.language")}
             </div>
             <input type="checkbox" className="dd-input" id="test" onClick={handleOnClick} />
             <ul className="dd-menu">

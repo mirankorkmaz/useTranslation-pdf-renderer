@@ -5,15 +5,6 @@ body {
     background-color: #f6f6f6;
 }
 
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
-a:hover {
-    color: #222222
-}
-
 /* Dropdown */
 
 .dropdown {
@@ -71,26 +62,18 @@ a:hover {
 
 .dd-input:checked+.dd-menu {
     display: block;
-}
-
-.dd-menu li {
-    padding: 10px 20px;
-    cursor: pointer;
-    white-space: nowrap;
     width: 100%;
 }
 
-.dd-menu li:hover {
-    background-color: #f6f6f6;
+.dd-menu p {
+    padding: 10px;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-.dd-menu li a {
-    display: block;
-    margin: -10px -20px;
-    padding: 10px 20px;
-}
-
-.dd-menu li.divider {
-    padding: 0;
-    border-bottom: 1px solid #cccccc;
+.dd-menu p:hover {
+    padding: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: #cec3c3;
 }
