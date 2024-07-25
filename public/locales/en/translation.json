@@ -8,5 +8,9 @@
       },
       "LandingPage": {
         "hi": "Hello!"
+      },
+      "Document": {
+        "section_one": "Section One!",
+          "section_two": "Section Two!"
       }
 }

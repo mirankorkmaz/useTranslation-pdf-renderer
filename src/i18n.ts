@@ -11,18 +11,18 @@ const initialLang = window.localStorage.getItem(langKey) || "sv";
 
 moment.locale(initialLang);
 
-export const i18nLoading = i18n.use(Backend).use(initReactI18next).init({debug: true, lng: initialLang, fallbackLng: "sv"});
+export const i18nLoading = i18n
+  .use(Backend)
+  .use(initReactI18next)
+  .init({ debug: true, lng: initialLang, fallbackLng: "sv" });
 
 export const setLanguage = (lang: string) => {
-    if(!languages.includes(lang)) {
-        throw new Error (`Language "${lang}" is not avaliable`);
-    }
-    window.localStorage.setItem(langKey, lang);
-    moment.locale(lang);
-    return i18n.changeLanguage(lang);
-}
+  if (!languages.includes(lang)) {
+    throw new Error(`Language "${lang}" is not avaliable`);
+  }
+  window.localStorage.setItem(langKey, lang);
+  moment.locale(lang);
+  return i18n.changeLanguage(lang);
+};
 
 export const getLanguage = () => i18n.language;
-
-export default i18n;
-

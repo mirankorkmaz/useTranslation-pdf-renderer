@@ -8,5 +8,10 @@
       },
       "LandingPage": {
         "hi": "Hallå!"
+      },
+      "Document": {
+        "section_one": "Sektion ett!",
+        "section_two": "Sektion två!"
       }
+      
 }
