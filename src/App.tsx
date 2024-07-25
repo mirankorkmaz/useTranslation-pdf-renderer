@@ -1,4 +1,4 @@
-import { PDFDownloadLink } from "@react-pdf/renderer";
+import { usePDF } from "@react-pdf/renderer";
 import "./App.css";
 import MyDocument from "./common/Document";
 import LandingPage from "./common/LandingPage";
@@ -7,15 +7,17 @@ import { useTranslation } from "react-i18next";
 
 const App = () => {
   const { t } = useTranslation();
+  const [instance] = usePDF({ document: <MyDocument /> });
+
+  if (instance.loading) return <div>{t("Download.loading")}</div>;
+
   return (
     <>
       <LanguagePicker />
       <LandingPage />
-      <PDFDownloadLink document={<MyDocument />} fileName="somename.pdf">
-        {({ loading }) =>
-          loading ? t("Download.loading") : t("Download.loadingDone")
-        }
-      </PDFDownloadLink>
+      <a href={instance.url || ""} download="test.pdf">
+        {t("Download.loadingDone")}
+      </a>
     </>
   );
 };
