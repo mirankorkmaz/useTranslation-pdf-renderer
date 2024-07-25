@@ -1,16 +1,20 @@
 {
-    "Language": {
-        "language": "Language",
-        "languages": {
-          "en": "English",
-          "sv": "Swedish"
-        }
-      },
-      "LandingPage": {
-        "hi": "Hello!"
-      },
-      "Document": {
-        "section_one": "Section One!",
-          "section_two": "Section Two!"
-      }
+  "Language": {
+    "language": "Language",
+    "languages": {
+      "en": "English",
+      "sv": "Swedish"
+    }
+  },
+  "LandingPage": {
+    "hi": "Hello!"
+  },
+  "Document": {
+    "section_one": "Section One!",
+    "section_two": "Section Two!"
+  },
+  "Download": {
+    "loading": "Loading document",
+    "loadingDone": "Download"
+  }
 }
